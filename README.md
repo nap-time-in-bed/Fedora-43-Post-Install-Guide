@@ -53,7 +53,7 @@ sudo fwupdmgr update
 * `modinfo -F version nvidia` #Check if the kernel module is built.
 * Reboot
 
-### NVIDIA Drivers for Encrypted Disk
+### NVIDIA Drivers for Encrypted Disk (OPTIONAL)
 * If you have encrypted your disk, you will see a blank screen after typing your password for accessing your disk. Plymouth tries to initialize graphics before the NVIDIA module is loaded, leading to a black or frozen screen.
 * Restart the PC and keep hitting 'e' to enter the GRUB Menu.
 * To the line starting with "linux" (it will be the longest line), append "nomodeset". This tells the system not to use the GPU.
@@ -127,7 +127,6 @@ DNS=1.1.1.2#security.cloudflare-dns.com 1.0.0.2#security.cloudflare-dns.com 2606
 DNSOverTLS=yes
 Domains=~.
 ```
-Adding Domains=~. ensures these DNS servers are used globally, not just as fallback.
 
 ## Set UTC Time
 * Used to counter time inconsistencies in dual boot systems
